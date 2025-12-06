@@ -1,26 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #FF4DA6;
+  --secondary-color: #5F6FFF;
+  --gradient-color: linear-gradient(90deg, #FF4DA6, #5F6FFF);
+  --background-color: #0A0A14;
+  --foreground-color: #0A0A14;
+  --card-or-Panel-color: #11111F;
+  --border-color: #1E1E2E;
+  --heading-color: #F7F7FF;
+  --body-text-color: #B5B5D2;
+  --subtle-placeholder-color: #7C7CA3;
+  --success-color: #4ADE80;
+  --warning-color: #FACC15;
+  --error-color: #F87171;
+
+  --title-font: 'Dela Gothic One', cursive;
+  --body-font: 'Inter', sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background-color);
+  --color-foreground: var(--foreground-color);
+  --font-sans: var(--title-font);
+  --font-mono: var(--body-font);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background-color: #0A0A14;
+    --foreground-color: #ededed;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-color);
+  color: var(--foreground-color);
+  font-family: 'Inter', sans-serif;
 }
