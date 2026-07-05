@@ -11,21 +11,11 @@ export default function Navbar() {
   const user = session?.user;
 
   return (
-    <header className="border-b border-border bg-bg/80 backdrop-blur">
+    <header className="backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         {/* Left: Brand */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-xs font-bold text-text-white">
-            AI
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-semibold text-text-white tracking-wide">
-              Anime Storyboard
-            </span>
-            <span className="text-xs text-text-light">
-              Turn ideas into anime scenes
-            </span>
-          </div>
+          <h3 className="website-title">AI Anime Storyboard Maker</h3>
         </Link>
 
         {/* Middle: Nav links (desktop) */}
@@ -51,7 +41,7 @@ export default function Navbar() {
           ) : user ? (
             <>
               {/* User pill */}
-              <div className="hidden sm:flex items-center gap-2 rounded-full bg-card border border-border px-3 py-1.5">
+              <div className="hidden sm:flex items-center gap-2 rounded-full bg-card border border-border border-[var(--border-color)] px-3 py-1.5">
                 {user.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img

@@ -2,7 +2,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AuthProvider from "@/components/AuthProvider";
+
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 import { getServerSession } from "next-auth";
 import { authOptions } from "./lib/AuthOptions";
@@ -25,6 +27,7 @@ export default async function RootLayout({
         <AuthProvider session={session}>
           <Navbar />
           <main className="mx-auto max-w-6xl px-4 py-6">{children}</main>
+          <Footer />
         </AuthProvider>
       </body>
     </html>

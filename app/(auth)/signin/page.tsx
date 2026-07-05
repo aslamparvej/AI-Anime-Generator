@@ -4,6 +4,7 @@
 import { FormEvent, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 export default function SignInPage() {
   const router = useRouter();
@@ -101,12 +102,7 @@ export default function SignInPage() {
 
         <p className="mt-6 text-center text-sm text-text-light">
           Don&apos;t have an account?{" "}
-          <a
-            href="/signup"
-            className="text-primary hover:underline"
-          >
-            Sign up
-          </a>
+          <Link href="/signup">Sign up</Link>
         </p>
       </div>
     </div>
